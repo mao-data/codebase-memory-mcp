@@ -1,0 +1,43 @@
+{
+  "site": {
+    "name": "AI Observer",
+    "description": "In-depth coverage of AI models, medical AI, and travel technology"
+  },
+  "nav": {
+    "home": "Home",
+    "models": "AI Models",
+    "medical": "Medical AI",
+    "travel": "Travel AI",
+    "search": "Search"
+  },
+  "home": {
+    "hero_title": "Tracking the AI Frontier",
+    "hero_subtitle": "Models · Medical AI · Travel Tech — weekly in-depth coverage",
+    "latest": "Latest Articles",
+    "view_all": "View All"
+  },
+  "article": {
+    "reading_time": "min read",
+    "published": "Published on",
+    "category": "Category",
+    "tags": "Tags",
+    "related": "Related Articles",
+    "share": "Share",
+    "comments": "Comments"
+  },
+  "search": {
+    "placeholder": "Search articles, tags, keywords…",
+    "no_results": "No matching articles found",
+    "results": "results",
+    "title": "Search"
+  },
+  "categories": {
+    "models": "AI Models",
+    "medical": "Medical AI",
+    "travel": "Travel AI"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "rss": "RSS Feed"
+  }
+}

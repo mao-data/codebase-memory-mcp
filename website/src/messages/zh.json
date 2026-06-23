@@ -1,0 +1,43 @@
+{
+  "site": {
+    "name": "AI 觀察",
+    "description": "深度追蹤人工智慧模型、醫療 AI 與旅遊科技最新動態"
+  },
+  "nav": {
+    "home": "首頁",
+    "models": "模型動態",
+    "medical": "醫療 AI",
+    "travel": "旅遊 AI",
+    "search": "搜尋"
+  },
+  "home": {
+    "hero_title": "深度追蹤 AI 最前線",
+    "hero_subtitle": "模型動態・醫療 AI・旅遊科技，每週精選深度報導",
+    "latest": "最新文章",
+    "view_all": "查看全部"
+  },
+  "article": {
+    "reading_time": "分鐘閱讀",
+    "published": "發布於",
+    "category": "分類",
+    "tags": "標籤",
+    "related": "相關文章",
+    "share": "分享",
+    "comments": "留言討論"
+  },
+  "search": {
+    "placeholder": "搜尋文章、標籤、關鍵字…",
+    "no_results": "找不到相符的文章",
+    "results": "篇結果",
+    "title": "搜尋"
+  },
+  "categories": {
+    "models": "模型動態",
+    "medical": "醫療 AI",
+    "travel": "旅遊 AI"
+  },
+  "footer": {
+    "rights": "版權所有",
+    "rss": "RSS 訂閱"
+  }
+}
