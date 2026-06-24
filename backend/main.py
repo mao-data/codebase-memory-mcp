@@ -8,13 +8,15 @@ load_dotenv()
 
 app = FastAPI(title="Journi AI Service", version="0.1.0")
 
-origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
+_raw_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000")
+origins = [o.strip() for o in _raw_origins.split(",") if o.strip()]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[o.strip() for o in origins],
-    allow_methods=["POST", "GET"],
-    allow_headers=["Content-Type", "Authorization"],
+    allow_origins=origins,
+    allow_methods=["POST"],
+    allow_headers=["Content-Type", "X-Backend-Token"],
+    allow_credentials=False,
 )
 
 app.include_router(generate.router, prefix="", tags=["AI"])
