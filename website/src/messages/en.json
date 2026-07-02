@@ -8,7 +8,23 @@
     "models": "AI Models",
     "medical": "Medical AI",
     "travel": "Travel AI",
+    "about": "About",
     "search": "Search"
+  },
+  "about": {
+    "title": "About AI Observer",
+    "intro": "AI Observer is an independent, bilingual (Traditional Chinese / English) publication dedicated to tracking the frontier of artificial intelligence. In an era of AI information overload, we believe readers need fewer headlines and more verified, contextual, trustworthy analysis.",
+    "mission_title": "Our Mission",
+    "mission": "To provide, in both Chinese and English, in-depth reporting and independent perspective on the frontier of AI models, medical AI, and travel technology — for Chinese-speaking and global readers alike.",
+    "coverage_title": "What We Cover",
+    "coverage_models": "AI Models: frontier model capabilities, the open-source ecosystem, benchmarks like SWE-bench, and enterprise AI agents and MCP.",
+    "coverage_medical": "Medical AI: diagnostic imaging, AlphaFold and drug discovery, clinical documentation, FDA policy, and mental-health applications.",
+    "coverage_travel": "Travel AI: AI travel agents, personalized itineraries, smart-airport biometrics, and the agentic-AI transformation of the travel industry.",
+    "standards_title": "Editorial Standards",
+    "standards": "Every article is grounded in public research, official documentation, industry data, and primary sources, with verifiable citations. We update existing articles as major developments occur and clearly mark publication and revision dates.",
+    "author_title": "About the Author",
+    "contact_title": "Contact Us",
+    "contact": "For feedback, collaboration, or submissions, reach us by replying to the newsletter or via our social channels."
   },
   "home": {
     "hero_title": "Tracking the AI Frontier",
@@ -19,9 +35,11 @@
   "article": {
     "reading_time": "min read",
     "published": "Published on",
+    "by": "By",
     "category": "Category",
     "tags": "Tags",
     "related": "Related Articles",
+    "about_author": "About the Author",
     "share": "Share",
     "comments": "Comments"
   },

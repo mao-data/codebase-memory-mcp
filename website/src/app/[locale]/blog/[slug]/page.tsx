@@ -8,6 +8,8 @@ import GiscusComments from '@/components/GiscusComments';
 import PostCard from '@/components/PostCard';
 import NewsletterForm from '@/components/NewsletterForm';
 import ToolRecommendations from '@/components/ToolRecommendations';
+import AuthorBio from '@/components/AuthorBio';
+import { AUTHOR } from '@/lib/author';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-observer.vercel.app';
 
@@ -61,7 +63,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
     articleSection: post.category,
     keywords: post.tags.join(', '),
     inLanguage: locale === 'zh' ? 'zh-TW' : 'en',
-    author: { '@type': 'Organization', name: t('site.name') },
+    author: { '@type': 'Organization', name: AUTHOR.name[locale === 'zh' ? 'zh' : 'en'], url: `${SITE_URL}/${locale}/about` },
     publisher: { '@type': 'Organization', name: t('site.name') },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/${locale}/blog/${slug}` },
   };
@@ -89,6 +91,10 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight">{post.title}</h1>
         <p className="mt-3 text-lg text-gray-600 dark:text-gray-400">{post.excerpt}</p>
         <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
+          <Link href={`/${locale}/about`} className="font-medium text-gray-700 dark:text-gray-300 hover:underline">
+            {t('article.by')} {AUTHOR.name[locale === 'zh' ? 'zh' : 'en']}
+          </Link>
+          <span>·</span>
           <span>{t('article.published')} <time>{post.date}</time></span>
           <span>·</span>
           <span>{post.readingTime} {t('article.reading_time')}</span>
@@ -111,6 +117,9 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         className="prose prose-gray dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:rounded prose-code:px-1"
         dangerouslySetInnerHTML={{ __html: html }}
       />
+
+      {/* Author bio (E-E-A-T) */}
+      <AuthorBio locale={locale as Locale} />
 
       {/* Recommended tools (affiliate) */}
       <ToolRecommendations category={post.category} locale={locale} />

@@ -16,6 +16,7 @@ export default function Header() {
     { href: `/${locale}/category/models`, label: t('nav.models') },
     { href: `/${locale}/category/medical`, label: t('nav.medical') },
     { href: `/${locale}/category/travel`, label: t('nav.travel') },
+    { href: `/${locale}/about`, label: t('nav.about') },
   ];
 
   return (
