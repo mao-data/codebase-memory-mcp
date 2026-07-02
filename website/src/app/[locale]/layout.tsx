@@ -9,10 +9,16 @@ import '../globals.css';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'site' });
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-observer.vercel.app';
   return {
+    metadataBase: new URL(siteUrl),
     title: { default: t('name'), template: `%s | ${t('name')}` },
     description: t('description'),
-    openGraph: { siteName: t('name'), locale: locale === 'zh' ? 'zh_TW' : 'en_US' },
+    openGraph: {
+      siteName: t('name'),
+      locale: locale === 'zh' ? 'zh_TW' : 'en_US',
+    },
+    twitter: { card: 'summary_large_image' },
   };
 }
 

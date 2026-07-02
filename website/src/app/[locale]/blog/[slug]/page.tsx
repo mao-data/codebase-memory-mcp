@@ -5,6 +5,11 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import GiscusComments from '@/components/GiscusComments';
+import PostCard from '@/components/PostCard';
+import NewsletterForm from '@/components/NewsletterForm';
+import ToolRecommendations from '@/components/ToolRecommendations';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-observer.vercel.app';
 
 type Params = Promise<{ locale: string; slug: string }>;
 
@@ -39,8 +44,34 @@ export default async function BlogPostPage({ params }: { params: Params }) {
   const altLocale = locale === 'zh' ? 'en' : 'zh';
   const altLabel = locale === 'zh' ? 'English' : '中文';
 
+  // Related posts: same category first, then fill with other recent posts.
+  const allPosts = getAllPosts(locale as Locale);
+  const related = [
+    ...allPosts.filter((p) => p.slug !== slug && p.category === post.category),
+    ...allPosts.filter((p) => p.slug !== slug && p.category !== post.category),
+  ].slice(0, 3);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    articleSection: post.category,
+    keywords: post.tags.join(', '),
+    inLanguage: locale === 'zh' ? 'zh-TW' : 'en',
+    author: { '@type': 'Organization', name: t('site.name') },
+    publisher: { '@type': 'Organization', name: t('site.name') },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/${locale}/blog/${slug}` },
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-8">
         <Link href={`/${locale}`} className="hover:underline">{t('nav.home')}</Link>
@@ -80,6 +111,26 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         className="prose prose-gray dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:rounded prose-code:px-1"
         dangerouslySetInnerHTML={{ __html: html }}
       />
+
+      {/* Recommended tools (affiliate) */}
+      <ToolRecommendations category={post.category} locale={locale} />
+
+      {/* Newsletter */}
+      <section className="mt-12">
+        <NewsletterForm variant="inline" />
+      </section>
+
+      {/* Related posts */}
+      {related.length > 0 && (
+        <section className="mt-16">
+          <h2 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">{t('article.related')}</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {related.map((p) => (
+              <PostCard key={p.slug} post={p} locale={locale} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Comments */}
       <section className="mt-16">

@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { getAllPosts } from '@/lib/posts';
 import PostCard from '@/components/PostCard';
+import NewsletterForm from '@/components/NewsletterForm';
 import type { Locale } from '@/lib/posts';
 import Link from 'next/link';
 
@@ -63,6 +64,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <PostCard key={post.slug} post={post} locale={locale} />
           ))}
         </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="mt-16">
+        <NewsletterForm variant="block" />
       </section>
     </div>
   );

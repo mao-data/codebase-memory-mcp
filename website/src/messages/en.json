@@ -36,6 +36,19 @@
     "medical": "Medical AI",
     "travel": "Travel AI"
   },
+  "newsletter": {
+    "title": "Subscribe to the Newsletter",
+    "subtitle": "Weekly in-depth AI coverage delivered to your inbox. Never miss the frontier.",
+    "placeholder": "Enter your email",
+    "button": "Subscribe Free",
+    "success": "Thanks for subscribing! Please check your inbox to confirm.",
+    "privacy": "We respect your privacy. Unsubscribe anytime."
+  },
+  "tools": {
+    "title": "Recommended Tools",
+    "disclosure": "Contains affiliate links. Purchases through these links cost you nothing extra but help support our work.",
+    "visit": "Learn more"
+  },
   "footer": {
     "rights": "All rights reserved",
     "rss": "RSS Feed"

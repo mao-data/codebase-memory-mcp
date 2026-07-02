@@ -36,6 +36,19 @@
     "medical": "醫療 AI",
     "travel": "旅遊 AI"
   },
+  "newsletter": {
+    "title": "訂閱電子報",
+    "subtitle": "每週 AI 深度報導直送信箱，不錯過任何前沿動態",
+    "placeholder": "輸入你的 Email",
+    "button": "免費訂閱",
+    "success": "感謝訂閱！請至信箱確認。",
+    "privacy": "我們尊重你的隱私，隨時可取消訂閱。"
+  },
+  "tools": {
+    "title": "本文推薦工具",
+    "disclosure": "以下含聯盟連結，透過連結購買不會增加你的費用，但能支持我們持續產出內容。",
+    "visit": "了解更多"
+  },
   "footer": {
     "rights": "版權所有",
     "rss": "RSS 訂閱"
