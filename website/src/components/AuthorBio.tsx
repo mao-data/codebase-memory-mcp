@@ -17,7 +17,7 @@ export default async function AuthorBio({ locale }: { locale: Locale }) {
     <section className="mt-16 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-6">
       <h2 className="sr-only">{t('article.about_author')}</h2>
       <div className="flex items-start gap-4">
-        <div className="shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center text-white text-xl font-bold">
+        <div className="shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-white text-xl font-bold">
           {initial}
         </div>
         <div>
@@ -32,7 +32,7 @@ export default async function AuthorBio({ locale }: { locale: Locale }) {
                   href={l.href}
                   target="_blank"
                   rel="noopener noreferrer me"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                  className="text-sm text-accent dark:text-accent-light hover:underline"
                 >
                   {l.label}
                 </a>

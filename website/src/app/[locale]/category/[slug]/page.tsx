@@ -82,8 +82,8 @@ export default async function CategoryPage({ params }: { params: Params }) {
 
       {/* Pillar hero */}
       <header className="mb-10 max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">{categoryLabel}</h1>
-        <p className="mt-2 text-lg font-medium text-blue-600 dark:text-blue-400">{tagline}</p>
+        <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">{categoryLabel}</h1>
+        <p className="mt-2 text-lg font-medium text-accent dark:text-accent-light">{tagline}</p>
         <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">{intro}</p>
       </header>
 
@@ -96,7 +96,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
               <Link
                 key={tag}
                 href={`/${locale}/tag/${tag}`}
-                className="text-sm px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors"
+                className="text-sm px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-accent/10 dark:hover:bg-accent/20 transition-colors"
               >
                 # {tag}
               </Link>

@@ -2,9 +2,16 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { ThemeProvider } from 'next-themes';
 import type { Metadata } from 'next';
+import { Fraunces, Noto_Serif_TC, Noto_Sans_TC } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import '../globals.css';
+
+// Editorial type system: Fraunces (latin display serif) with Noto Serif TC as
+// the CJK display fallback; Noto Sans TC covers body text in both languages.
+const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-display', display: 'swap' });
+const notoSerifTC = Noto_Serif_TC({ weight: ['600', '700', '900'], subsets: ['latin'], variable: '--font-display-tc', display: 'swap' });
+const notoSansTC = Noto_Sans_TC({ weight: ['400', '500', '700'], subsets: ['latin'], variable: '--font-sans-body', display: 'swap' });
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -38,7 +45,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale === 'zh' ? 'zh-TW' : 'en'} suppressHydrationWarning>
-      <body className="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
+      <body className={`${fraunces.variable} ${notoSerifTC.variable} ${notoSansTC.variable} font-sans bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider messages={messages}>
             <Header />

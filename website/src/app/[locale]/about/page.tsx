@@ -38,7 +38,7 @@ export default async function AboutPage({ params }: { params: Params }) {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">{t('about.title')}</h1>
+      <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">{t('about.title')}</h1>
       <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">{t('about.intro')}</p>
 
       <div className="mt-10 space-y-10">
@@ -64,7 +64,7 @@ export default async function AboutPage({ params }: { params: Params }) {
         <section>
           <h2 className="text-xl font-bold text-gray-900 dark:text-white">{t('about.author_title')}</h2>
           <div className="mt-3 flex items-start gap-4">
-            <div className="shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center text-white text-xl font-bold">
+            <div className="shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-white text-xl font-bold">
               {AUTHOR.name[lang].charAt(0)}
             </div>
             <div>

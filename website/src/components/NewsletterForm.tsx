@@ -25,7 +25,7 @@ export default function NewsletterForm({ variant = 'block' }: { variant?: 'block
     <div
       className={
         variant === 'block'
-          ? 'rounded-2xl border border-blue-100 dark:border-gray-700 bg-gradient-to-br from-blue-50 to-violet-50 dark:from-gray-800 dark:to-gray-800 p-8 text-center'
+          ? 'rounded-2xl border border-accent/20 dark:border-gray-700 bg-gradient-to-br from-accent/5 to-accent/10 dark:from-gray-800 dark:to-gray-800 p-8 text-center'
           : 'rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-6'
       }
     >
@@ -46,11 +46,11 @@ export default function NewsletterForm({ variant = 'block' }: { variant?: 'block
             name="email"
             required
             placeholder={t('placeholder')}
-            className="flex-1 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-2.5 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-2.5 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-accent"
           />
           <button
             type="submit"
-            className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors whitespace-nowrap"
+            className="rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-dark transition-colors whitespace-nowrap"
           >
             {t('button')}
           </button>

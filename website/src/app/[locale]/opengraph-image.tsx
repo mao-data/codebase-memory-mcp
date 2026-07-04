@@ -20,14 +20,15 @@ export default async function OgImage({ params }: { params: { locale: string } }
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
+          background: '#0F1117',
           color: 'white',
           padding: '80px',
           textAlign: 'center',
         }}
       >
+        <div style={{ width: 120, height: 8, background: '#FF4D00', borderRadius: 4, marginBottom: 40 }} />
         <div style={{ fontSize: 96, fontWeight: 800, letterSpacing: '-0.02em' }}>{t('name')}</div>
-        <div style={{ fontSize: 40, marginTop: 24, opacity: 0.9, maxWidth: 900 }}>{t('description')}</div>
+        <div style={{ fontSize: 40, marginTop: 24, opacity: 0.85, maxWidth: 900 }}>{t('description')}</div>
       </div>
     ),
     { ...size }

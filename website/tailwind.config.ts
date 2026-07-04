@@ -13,6 +13,15 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: {
+          light: "#FF7A33",
+          DEFAULT: "#FF4D00",
+          dark: "#D63E00",
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-sans-body)", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-display-tc)", "serif"],
       },
       typography: {
         DEFAULT: {

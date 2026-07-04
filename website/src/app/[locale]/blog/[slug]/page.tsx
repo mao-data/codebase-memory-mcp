@@ -85,10 +85,10 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
       {/* Header */}
       <header className="mb-10">
-        <Link href={`/${locale}/category/${post.category}`} className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+        <Link href={`/${locale}/category/${post.category}`} className="text-xs font-bold uppercase tracking-widest text-accent dark:text-accent-light">
           {post.category}
         </Link>
-        <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight">{post.title}</h1>
+        <h1 className="mt-2 font-display text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight">{post.title}</h1>
         <p className="mt-3 text-lg text-gray-600 dark:text-gray-400">{post.excerpt}</p>
         <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
           <Link href={`/${locale}/about`} className="font-medium text-gray-700 dark:text-gray-300 hover:underline">
@@ -99,12 +99,12 @@ export default async function BlogPostPage({ params }: { params: Params }) {
           <span>·</span>
           <span>{post.readingTime} {t('article.reading_time')}</span>
           <span>·</span>
-          <Link href={`/${altLocale}/blog/${slug}`} className="text-blue-600 dark:text-blue-400 hover:underline">{altLabel}</Link>
+          <Link href={`/${altLocale}/blog/${slug}`} className="text-accent dark:text-accent-light hover:underline">{altLabel}</Link>
         </div>
         {post.tags.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-2">
             {post.tags.map((tag) => (
-              <Link key={tag} href={`/${locale}/tag/${tag}`} className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/30">
+              <Link key={tag} href={`/${locale}/tag/${tag}`} className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-accent/10 dark:hover:bg-accent/20">
                 # {tag}
               </Link>
             ))}
@@ -114,7 +114,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
       {/* Content */}
       <article
-        className="prose prose-gray dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:rounded prose-code:px-1"
+        className="prose prose-lg prose-gray dark:prose-invert max-w-none prose-headings:font-bold prose-p:leading-relaxed prose-a:text-accent dark:prose-a:text-accent-light prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:rounded prose-code:px-1"
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
