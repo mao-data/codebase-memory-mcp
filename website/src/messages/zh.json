@@ -1,0 +1,90 @@
+{
+  "site": {
+    "name": "AI 觀察",
+    "description": "深度追蹤人工智慧模型、醫療 AI 與旅遊科技最新動態"
+  },
+  "nav": {
+    "home": "首頁",
+    "models": "模型動態",
+    "medical": "醫療 AI",
+    "travel": "旅遊 AI",
+    "about": "關於",
+    "search": "搜尋"
+  },
+  "about": {
+    "title": "關於 AI 觀察",
+    "intro": "AI 觀察是一個獨立的雙語（繁體中文／英文）媒體，專注追蹤人工智慧的最新發展。我們相信，在資訊爆炸的 AI 時代，讀者需要的不是更多新聞，而是經過查證、有脈絡、可信賴的深度分析。",
+    "mission_title": "我們的使命",
+    "mission": "以中英雙語，為華語與全球讀者提供關於 AI 模型、醫療 AI 與旅遊科技最前線的深度報導與獨立觀點。",
+    "coverage_title": "報導範疇",
+    "coverage_models": "模型動態：前沿模型能力、開源生態、SWE-bench 等基準、企業級 AI Agent 與 MCP 應用。",
+    "coverage_medical": "醫療 AI：醫學影像診斷、AlphaFold 與藥物開發、臨床文件自動化、FDA 政策與心理健康應用。",
+    "coverage_travel": "旅遊 AI：AI 旅遊代理人、個人化行程、智慧機場生物辨識與旅遊產業的 agentic AI 轉型。",
+    "standards_title": "編輯原則",
+    "standards": "每篇文章皆基於公開研究、官方文件、產業數據與第一手資料撰寫，並標註可查證的來源。我們會在重大進展出現時更新既有文章，並清楚標示發布與更新日期。",
+    "author_title": "關於作者",
+    "contact_title": "聯絡我們",
+    "contact": "有指教、合作或投稿意願，歡迎透過電子報回信或社群管道與我們聯繫。"
+  },
+  "home": {
+    "hero_title": "深度追蹤 AI 最前線",
+    "hero_subtitle": "模型動態・醫療 AI・旅遊科技，每週精選深度報導",
+    "latest": "最新文章",
+    "view_all": "查看全部"
+  },
+  "article": {
+    "reading_time": "分鐘閱讀",
+    "published": "發布於",
+    "by": "作者",
+    "category": "分類",
+    "tags": "標籤",
+    "related": "相關文章",
+    "about_author": "關於作者",
+    "share": "分享",
+    "comments": "留言討論"
+  },
+  "search": {
+    "placeholder": "搜尋文章、標籤、關鍵字…",
+    "no_results": "找不到相符的文章",
+    "results": "篇結果",
+    "title": "搜尋"
+  },
+  "categories": {
+    "models": "模型動態",
+    "medical": "醫療 AI",
+    "travel": "旅遊 AI"
+  },
+  "pillar": {
+    "articles_title": "所有文章",
+    "topics_title": "延伸子主題",
+    "models": {
+      "tagline": "前沿模型、開源生態與企業級 AI 應用",
+      "intro": "從 GPT、Claude 到 DeepSeek、Qwen，大型語言模型的能力邊界正以季為單位被改寫。本主題深入追蹤前沿模型的實際能力、SWE-bench 等程式基準、快速崛起的開源生態，以及 AI Agent 與 MCP 如何在企業落地。我們關注的不只是排行榜數字，而是這些進展對開發者與產業的真實意義。"
+    },
+    "medical": {
+      "tagline": "從影像診斷到藥物開發的 AI 醫療前線",
+      "intro": "AI 正在改變醫療的每一個環節：從癌症影像判讀、AlphaFold 加速藥物開發，到臨床文件自動化與心理健康聊天機器人。本主題以嚴謹的態度追蹤醫療 AI 的臨床證據、FDA 監管政策與實際成效，因為在攸關生命的領域，準確與可信比什麼都重要。"
+    },
+    "travel": {
+      "tagline": "AI 如何重塑旅遊的每一段旅程",
+      "intro": "從行程規劃、個人化推薦到機場生物辨識與訂房自動化，AI 旅遊代理人正把「規劃一趟旅行」從數小時壓縮到數分鐘。本主題追蹤 agentic AI 在旅遊產業的落地應用、主要平台的競爭，以及這場變革對旅客體驗與產業結構的影響。"
+    }
+  },
+  "newsletter": {
+    "title": "訂閱電子報",
+    "subtitle": "每週 AI 深度報導直送信箱，不錯過任何前沿動態",
+    "placeholder": "輸入你的 Email",
+    "button": "免費訂閱",
+    "success": "感謝訂閱！請至信箱確認。",
+    "privacy": "我們尊重你的隱私，隨時可取消訂閱。"
+  },
+  "tools": {
+    "title": "本文推薦工具",
+    "disclosure": "以下含聯盟連結，透過連結購買不會增加你的費用，但能支持我們持續產出內容。",
+    "visit": "了解更多"
+  },
+  "footer": {
+    "rights": "版權所有",
+    "rss": "RSS 訂閱"
+  }
+}

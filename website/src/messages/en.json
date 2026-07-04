@@ -1,0 +1,90 @@
+{
+  "site": {
+    "name": "AI Observer",
+    "description": "In-depth coverage of AI models, medical AI, and travel technology"
+  },
+  "nav": {
+    "home": "Home",
+    "models": "AI Models",
+    "medical": "Medical AI",
+    "travel": "Travel AI",
+    "about": "About",
+    "search": "Search"
+  },
+  "about": {
+    "title": "About AI Observer",
+    "intro": "AI Observer is an independent, bilingual (Traditional Chinese / English) publication dedicated to tracking the frontier of artificial intelligence. In an era of AI information overload, we believe readers need fewer headlines and more verified, contextual, trustworthy analysis.",
+    "mission_title": "Our Mission",
+    "mission": "To provide, in both Chinese and English, in-depth reporting and independent perspective on the frontier of AI models, medical AI, and travel technology — for Chinese-speaking and global readers alike.",
+    "coverage_title": "What We Cover",
+    "coverage_models": "AI Models: frontier model capabilities, the open-source ecosystem, benchmarks like SWE-bench, and enterprise AI agents and MCP.",
+    "coverage_medical": "Medical AI: diagnostic imaging, AlphaFold and drug discovery, clinical documentation, FDA policy, and mental-health applications.",
+    "coverage_travel": "Travel AI: AI travel agents, personalized itineraries, smart-airport biometrics, and the agentic-AI transformation of the travel industry.",
+    "standards_title": "Editorial Standards",
+    "standards": "Every article is grounded in public research, official documentation, industry data, and primary sources, with verifiable citations. We update existing articles as major developments occur and clearly mark publication and revision dates.",
+    "author_title": "About the Author",
+    "contact_title": "Contact Us",
+    "contact": "For feedback, collaboration, or submissions, reach us by replying to the newsletter or via our social channels."
+  },
+  "home": {
+    "hero_title": "Tracking the AI Frontier",
+    "hero_subtitle": "Models · Medical AI · Travel Tech — weekly in-depth coverage",
+    "latest": "Latest Articles",
+    "view_all": "View All"
+  },
+  "article": {
+    "reading_time": "min read",
+    "published": "Published on",
+    "by": "By",
+    "category": "Category",
+    "tags": "Tags",
+    "related": "Related Articles",
+    "about_author": "About the Author",
+    "share": "Share",
+    "comments": "Comments"
+  },
+  "search": {
+    "placeholder": "Search articles, tags, keywords…",
+    "no_results": "No matching articles found",
+    "results": "results",
+    "title": "Search"
+  },
+  "categories": {
+    "models": "AI Models",
+    "medical": "Medical AI",
+    "travel": "Travel AI"
+  },
+  "pillar": {
+    "articles_title": "All Articles",
+    "topics_title": "Related Subtopics",
+    "models": {
+      "tagline": "Frontier models, open source, and enterprise AI",
+      "intro": "From GPT and Claude to DeepSeek and Qwen, the capability frontier of large language models is being rewritten by the quarter. This topic tracks what frontier models can actually do, coding benchmarks like SWE-bench, the fast-rising open-source ecosystem, and how AI agents and MCP are landing in the enterprise. We care less about leaderboard numbers than about what these advances mean for developers and industry."
+    },
+    "medical": {
+      "tagline": "The medical AI frontier, from imaging to drug discovery",
+      "intro": "AI is transforming every stage of medicine: from cancer imaging and AlphaFold-accelerated drug discovery to clinical documentation and mental-health chatbots. This topic tracks the clinical evidence, FDA regulation, and real-world outcomes of medical AI with rigor — because in life-critical domains, accuracy and trust matter more than anything."
+    },
+    "travel": {
+      "tagline": "How AI is reshaping every stage of the journey",
+      "intro": "From itinerary planning and personalization to airport biometrics and booking automation, AI travel agents are compressing 'planning a trip' from hours into minutes. This topic tracks agentic AI adoption across the travel industry, the platform competition, and what this shift means for traveler experience and industry structure."
+    }
+  },
+  "newsletter": {
+    "title": "Subscribe to the Newsletter",
+    "subtitle": "Weekly in-depth AI coverage delivered to your inbox. Never miss the frontier.",
+    "placeholder": "Enter your email",
+    "button": "Subscribe Free",
+    "success": "Thanks for subscribing! Please check your inbox to confirm.",
+    "privacy": "We respect your privacy. Unsubscribe anytime."
+  },
+  "tools": {
+    "title": "Recommended Tools",
+    "disclosure": "Contains affiliate links. Purchases through these links cost you nothing extra but help support our work.",
+    "visit": "Learn more"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "rss": "RSS Feed"
+  }
+}
