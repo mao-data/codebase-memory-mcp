@@ -1,0 +1,64 @@
+# Daily bilingual AI article — GitHub Actions fallback for the Claude routine.
+#
+# SETUP (one-time, required before this works):
+#   Repo Settings → Secrets and variables → Actions → New repository secret
+#   Name: ANTHROPIC_API_KEY   Value: <your key from console.anthropic.com>
+#
+# Runs daily at 16:06 UTC (~9am US Pacific). Can also be run manually from
+# the Actions tab via "Run workflow".
+name: Daily AI Article
+
+on:
+  schedule:
+    - cron: '6 16 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  write-article:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Write and publish daily article
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: '--allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" --max-turns 80'
+          prompt: |
+            You are running a daily automated content routine for the bilingual AI media
+            website "AI 觀察 / AI Observer". Articles are Markdown files in
+            website/_posts/zh/ (Traditional Chinese) and website/_posts/en/ (English).
+            The repository owner has authorized committing daily article content
+            directly to main. Do not modify anything outside website/_posts/.
+
+            Steps:
+            1. Read existing filenames in website/_posts/zh/ and skim one recent post to
+               match frontmatter format (title, date, excerpt, category, tags), tone, and length.
+            2. Web-search for the most significant AI development of the last 24-48 hours
+               fitting ONE category: models, medical, or travel. Avoid topics already
+               covered (check slugs/titles). Prefer whichever category currently has the
+               fewest articles when news quality is comparable.
+            3. Research with several searches; collect real, verifiable facts and numbers.
+            4. Write ONE article in BOTH languages with the SAME slug:
+               website/_posts/zh/<slug>.md (Traditional Chinese, Taiwan usage — a native
+               rewrite, not a literal translation) and website/_posts/en/<slug>.md.
+               Body 1200-2000 words, markdown headings, cite source publication names
+               inline, never fabricate statistics. date = today (UTC).
+            5. Verify: cd website && npm ci && npm run build. Do not commit if the build fails.
+            6. Commit both files with message
+               "content: add daily article <slug> (zh/en)" and push to main:
+               git config user.name "github-actions[bot]"
+               git config user.email "github-actions[bot]@users.noreply.github.com"
+               git pull --rebase origin main && git push origin main
+            7. If blocked (no newsworthy topic, unfixable build failure), exit without
+               committing broken content.
